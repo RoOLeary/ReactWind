@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 export const Form = () => {
     const { register, handleSubmit, watch, errors } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => setName(data.fullname);
+    const [ name, setName ] = useState('us');
 
     return(
         <section className="relative block py-24 lg:pt-0 bg-gray-900">
@@ -14,7 +15,7 @@ export const Form = () => {
                   <div className="flex-auto p-5 lg:p-10">
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <h4 className="text-2xl font-semibold">
-                        Want to work with cock?
+                        Want to work with {name}?
                         </h4>
                         <p className="leading-relaxed mt-1 mb-4 text-gray-600">
                         Complete this form and we will get back to you in 24 hours.
@@ -48,7 +49,10 @@ export const Form = () => {
                             type="email"
                             name="email" 
                             defaultValue="Enter Your Email Address" 
-                            ref={register} 
+                            ref={register({
+                                required: true
+                                //validate: (input) => isEmail(input),
+                            })}
                             className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                             placeholder="Email"
                             style={{ transition: "all .15s ease" }}
@@ -72,16 +76,15 @@ export const Form = () => {
                         />
                         </div>
                         <div className="text-center mt-6">
-                        <input className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" type="submit" />
-                       
+                            <input className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" type="submit" />
                         </div>
                    </form>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </section>
+        </div>
+        </div>
+    </div>
+    </section>
     )
 }
 
