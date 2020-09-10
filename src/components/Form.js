@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 export const Form = () => {
-    const { register, handleSubmit, watch, errors } = useForm();
-    const onSubmit = data => setName(data.fullname);
+    const { register, handleSubmit } = useForm();
+    const onSubmit = (data, e) => {
+        setName(data.fullname);
+        console.log(data);
+        e.target.reset(); 
+    };
     const [ name, setName ] = useState('us');
 
     return(

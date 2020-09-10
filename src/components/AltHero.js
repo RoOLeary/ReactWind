@@ -11,7 +11,7 @@ const AltHero = () => {
                         <p className="mt-4 text-lg leading-relaxed text-gray-600">Tailwind Starter Kit is Free and Open Source. It does not change or add any CSS to the already one from <a href="https://tailwindcss.com/?ref=creativetim" className="text-gray-700" target="_blank">TailwindCSS</a>. It features multiple HTML elements and it comes with dynamic components for ReactJS, Vue and Angular.</p>
                         <div className="mt-12">
                             <a className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-pink-500 active:bg-pink-600 uppercase text-sm shadow hover:shadow-lg" style={{ transition: "all .15s ease" }} href="/learning-lab/tailwind-starter-kit/documentation/download">Get started</a>
-                            <a href="https://github.com/creativetimofficial/tailwind-starter-kit" className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-800 active:bg-gray-700 uppercase text-sm shadow hover:shadow-lg" target="_blank">Github Star</a>
+                            <a href="https://github.com/creativetimofficial/tailwind-starter-kit" className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-800 active:bg-gray-700 uppercase text-sm shadow hover:shadow-lg" target="_blank" rel="noopener noreferrer">Github Star</a>
                         </div>
                     </div>
                 </div>

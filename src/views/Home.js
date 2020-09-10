@@ -19,7 +19,7 @@ export default function Home() {
 
 		<CTABlock />
 
-		<section class="pb-20 bg-white-300 mt-24">
+		<section className="pb-20 bg-white-300 mt-24">
 			<div className="container mx-auto px-12">
 				<div className="flex flex-wrap">
 					<div className="font-serif leading-normal mx-auto py-12 px-12 max-w-lg">
