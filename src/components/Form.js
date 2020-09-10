@@ -35,7 +35,6 @@ export const Form = () => {
                       
                        <input 
                             name="fullname" 
-                            defaultValue="Enter Full Name" 
                             ref={register} 
                             className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                             placeholder="Full Name"
@@ -52,13 +51,12 @@ export const Form = () => {
                         <input
                             type="email"
                             name="email" 
-                            defaultValue="Enter Your Email Address" 
                             ref={register({
                                 required: true
                                 //validate: (input) => isEmail(input),
                             })}
                             className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                            placeholder="Email"
+                            placeholder="Enter Your Email Address"
                             style={{ transition: "all .15s ease" }}
                         />
                         </div>
